@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upload Problem</title>
+        <link rel="stylesheet" href="./main.css">
+        <style>
+        h2{
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px rgb(55, 197, 161);
+            font-weight: 200;
+            font-size: 30px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a  href="./main.html">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li style="float:right"><a href="#about">About Us</a></li>
+          </ul> <br><br>
+        <h2>UPLOAD PROBLEM</h2>
+          <center><p style="color: red; font-size: 20px;background-color: white;width: 5cm;text-align: center;">All fields are necessary</p><br>
+         <div style="background-color: white;width: 17cm; height:1.5cm;text-align:center;padding-top: 0.7cm;border: 2px solid black;" ><b style="font-size: larger;" required>Upload Image:</b>&emsp; &emsp; &emsp;<input type="file" required></div><br>
+         <div style="background-color: white;width: 17cm; height:3cm;text-align:center;padding-top: 0.7cm;border: 2px solid black;" ><mark><b style="font-size: larger;">Click The Button To Let
+        us Know The Location Where the Problem was</b></mark><br><br><button onclick="getLocation()">Location</button>
+            <p id="demo"></p>
+        </div><br>
+        <div style="background-color: white;width: 17cm; height:1cm; text-align:center;padding-top: 0.5cm;border: 2px solid black;" >
+            <b style="font-size: larger;">Problem Type: &emsp; &emsp; </b><input type="text" placeholder="enter problem" required>
+        </div><br>
+        <div style="background-color: white;width: 17cm; height:3.5cm; text-align:center;padding-top: 0.5cm;border: 2px solid black;" >
+            <b style="font-size: larger;">Address:&emsp; &emsp;</b> <textarea rows="5" cols="30" placeholder="enter address in brief...district,mandal,village where problems was"required></textarea>
+            </div><br>
+            <div style="background-color: white;width: 4cm; height:0.6cm; text-align:center; padding-top: 0.2cm;border: 2px solid black;" >
+            <input type="submit"></div><br><br>
+        </center>
+        <script>
+            var x = document.getElementById("demo");
+            
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+              } else { 
+                x.innerHTML = "Geolocation is not supported by this browser.";
+              }
+            }
+                
+            function showPosition(position) {
+                x.innerHTML="Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;
+            }
+            </script>
+    </body>
+</html>

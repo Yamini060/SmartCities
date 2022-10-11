@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <meta name="viewport" content="width=device-width ,initial scale=1.0">
+      <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+      <ul>
+        <li><a  href="./main.html">Home</a></li>
+        <li><a class="active" href="#news">Register</a></li>
+        <li><a  href="./login.html">Login</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="float:right"><a href="#about">About Us</a></li>
+      </ul> <br><br>
+      <h1 style="color:white;text-align: center;font-size: 40px;">Register Here</h1>
+      <center>
+      <div style="text-align: center;border: 5px solid black;width: 800px;height: 600px;background-color: white;"><br><br>
+      <form action="connect.php" method="post">
+        <b><label style="color:black;font-family:verdana"> First Name &emsp; &emsp; &emsp; &emsp; &emsp; :</label>
+        <input type="text" placeholder="enter your first name" name="fname" id="fname" required><br><br>
+        <label style="color:black;font-family: verdana"> Last Name &emsp; &emsp; &emsp; &emsp; &emsp;:</label>
+        <input type="text" placeholder="enter your last name"name="lname" id="lname"required><br><br>
+        <label style="color:black;font-family:verdana"> Gender &emsp; &emsp; &emsp; &emsp; &emsp;&emsp; :</label>
+         <input type="radio" id="male" name="gender" value="male" >Male
+          <input type="radio" id="female" name="gender" value="female">Female<br><br>
+          <label style="color:rgb(20, 20, 20) ; font-family: verdana">Date Of Birth&emsp; &emsp; &emsp; &emsp;:</label>
+          <input type="Date" name="date" required><br><br>
+          <label style="color:rgb(17, 17, 17) ; font-family: verdana">Email ID:&emsp; &emsp; &emsp; &emsp; &emsp; :</label>
+          <input type="Email" placeholder="enter your email id" id="email" name="email" required><br><br>
+          <label style="color:rgb(24, 23, 23) ; font-family: verdana">Phone Number: &emsp; &emsp; &emsp;:</label>
+          <input type="text" placeholder="enter your phone no." maxlength="10" name="phno"required><br><br>
+          <label style="color:rgb(17, 17, 17) ; font-family: verdana">Address &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;:</label>
+          <textarea rows="5" cols="30" placeholder="enter your address"name="address"required></textarea><br><br>
+          <label style="color:rgb(15, 15, 15);font-family:verdana">User Name &emsp; &emsp; &emsp; &emsp; :</label>
+          <input type=text placeholder="enter user name" name="username" required><br><br>
+          <label style="color:rgb(34, 33, 33);font-family:verdana"> Password &emsp; &emsp; &emsp; &emsp;  :</label>
+          <input type="Password" placeholder="enter password"name="password"required><br><br>
+         <label style="color:rgb(17, 17, 17);font-family:verdana">Confirm Password :</label>
+         <input type="password" placeholder="Re-enter password"><br><br> <br>
+	     &emsp; <input type="submit" style="width: 4cm;" ><br><br>
+       </b>
+      </form>
+      </div>
+    </center>
+    </body>
+</html>
